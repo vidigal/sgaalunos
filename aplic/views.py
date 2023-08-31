@@ -1,8 +1,4 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic import TemplateView
 
-def index(request):
-    return HttpResponse("Olá mundo! Você está na página principal do SCA.")
-
-def teste(request):
-    return HttpResponse("isso é um teste")
+class IndexView(TemplateView):
+    template_name = 'index.html'
